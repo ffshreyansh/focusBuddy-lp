@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer class="w-full">
+    <footer class="w-full bg-slate-50">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-8 py-10 max-sm:max-w-sm max-sm:mx-auto gap-y-8">
           <div class="col-span-full mb-10 lg:col-span-2 lg:mb-0">
@@ -40,7 +40,7 @@ const Footer = () => {
             </p>
             <a
               href="javascript:;"
-              class="py-2.5 px-5 h-9 block w-fit bg-indigo-600 rounded-full shadow-sm text-xs text-white mx-auto transition-all  duration-500 hover:bg-indigo-700 lg:mx-0"
+              class="py-2.5 px-5 h-9 block w-fit bg-yellow-500 rounded-full shadow-sm text-xs text-white mx-auto transition-all  duration-500 hover:bg-black lg:mx-0"
             >
               Contact us
             </a>
@@ -197,13 +197,13 @@ const Footer = () => {
         <div class="py-7 border-t border-gray-200">
           <div class="flex items-center justify-center flex-col lg:justify-between lg:flex-row">
             <span class="text-sm text-gray-500 ">
-              ©<a href="https://focusbuddy.com/">focusbuddy</a> 2024, All rights
-              reserved.
+              ©<a href="https://focusbuddy.com/">focusbuddy</a> 2024, All
+              rights reserved.
             </span>
             <div class="flex mt-4 space-x-4 sm:justify-center lg:mt-0 ">
               <a
                 href="javascript:;"
-                class="w-9 h-9 rounded-full bg-gray-700 flex justify-center items-center hover:bg-indigo-600"
+                class="w-9 h-9 rounded-full bg-gray-700 flex justify-center items-center hover:bg-yellow-600"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -223,7 +223,7 @@ const Footer = () => {
               </a>
               <a
                 href="javascript:;"
-                class="w-9 h-9 rounded-full bg-gray-700 flex justify-center items-center hover:bg-indigo-600"
+                class="w-9 h-9 rounded-full bg-gray-700 flex justify-center items-center hover:bg-yellow-600"
               >
                 <svg
                   class="w-[1.25rem] h-[1.125rem] text-white"
@@ -239,7 +239,7 @@ const Footer = () => {
               </a>
               <a
                 href="javascript:;"
-                class="w-9 h-9 rounded-full bg-gray-700 flex justify-center items-center hover:bg-indigo-600"
+                class="w-9 h-9 rounded-full bg-gray-700 flex justify-center items-center hover:bg-yellow-600"
               >
                 <svg
                   class="w-[1rem] h-[1rem] text-white"
@@ -255,7 +255,7 @@ const Footer = () => {
               </a>
               <a
                 href="javascript:;"
-                class="w-9 h-9 rounded-full bg-gray-700 flex justify-center items-center hover:bg-indigo-600"
+                class="w-9 h-9 rounded-full bg-gray-700 flex justify-center items-center hover:bg-yellow-600"
               >
                 <svg
                   class="w-[1.25rem] h-[0.875rem] text-white"

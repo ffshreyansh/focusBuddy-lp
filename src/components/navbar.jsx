@@ -1,13 +1,36 @@
-import React from "react";
-import { Button } from "./ui/button";
+"use client";
+import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
 
 const Navbar = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const variants = {
+    hidden: { opacity: 0, y: -50, translateX: isMobile ? "0%" : "-50%" },
+    visible: { opacity: 1, y: 0, translateX: isMobile ? "0%" : "-50%" },
+  };
+
   return (
-    <div className="fixed flex left-1/2 right-1/2 -translate-x-1/2 items-center nv-bg justify-between w-full md:w-1/3 mx-auto rounded-full px-8 py-3 my-10 bg-[#fde9a9]  cursor-pointer">
+    <motion.nav
+      className="md:fixed z-40 flex md:left-1/2 md:right-1/2 items-center nv-bg justify-between w-full md:w-1/2 lg:w-1/3 mx-auto md:rounded-full px-8 py-4 md:py-3 md:my-10 bg-[#fde9a9]  cursor-pointer"
+      initial="hidden" // Initial state is hidden
+      animate="visible" // When the component mounts, animate to visible state
+      variants={variants} // Use the variants defined above
+      transition={{ duration: 0.5 }} // Define the transition duration
+    >
       <div className="font-semibold logo text-xs">
         <svg
           width="110"
-          height="40"
+          height="20"
           viewBox="0 0 213 40"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -32,11 +55,12 @@ const Navbar = () => {
           />
         </svg>
       </div>
-
-      <div className="text-sm">Home</div>
-      <div className="text-sm">About</div>
-      <div className="text-sm">Products</div>
-      <div className="flex items-center gap-1 text-sm">
+      <div className=" gap-8 items-center hidden md:flex">
+        <div className="text-sm">Home</div>
+        <div className="text-sm">About</div>
+        <div className="text-sm">Products</div>
+      </div>
+      <div className="flex items-center gap-1 text-sm ">
         Get in touch
         <svg
           width="15"
@@ -53,7 +77,7 @@ const Navbar = () => {
           ></path>
         </svg>
       </div>
-    </div>
+    </motion.nav>
   );
 };
 

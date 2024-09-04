@@ -67,8 +67,12 @@
 }
 
 .nv-bg {
-  background: rgba(253, 233, 169, 0.626);
+  background: rgba(253, 233, 169, 0.73);
   backdrop-filter: blur(1.5px);
   -webkit-backdrop-filter: blur(1.5px);
   border: 1px solid #fde9a9;
+}
+
+.trns {
+  transform: translate(-50%, 0) !important;
 }
