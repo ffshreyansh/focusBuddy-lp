@@ -197,8 +197,8 @@ const Footer = () => {
         <div class="py-7 border-t border-gray-200">
           <div class="flex items-center justify-center flex-col lg:justify-between lg:flex-row">
             <span class="text-sm text-gray-500 ">
-              ©<a href="https://focusbuddy.com/">focusbuddy</a> 2024, All
-              rights reserved.
+              ©<a href="https://focusbuddy.com/">focusbuddy</a> 2024, Made by{" "}
+              <a href="https://shreyanshkr.com">Shreyansh</a>
             </span>
             <div class="flex mt-4 space-x-4 sm:justify-center lg:mt-0 ">
               <a
