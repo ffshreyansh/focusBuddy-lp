@@ -3,14 +3,17 @@ import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 
 const Navbar = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
 
+    handleResize();
+
     window.addEventListener("resize", handleResize);
+
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
@@ -22,10 +25,10 @@ const Navbar = () => {
   return (
     <motion.nav
       className="md:fixed z-40 flex md:left-1/2 md:right-1/2 items-center nv-bg justify-between w-full md:w-1/2 lg:w-1/3 mx-auto md:rounded-full px-8 py-4 md:py-3 md:my-10 bg-[#fde9a9]  cursor-pointer"
-      initial="hidden" // Initial state is hidden
-      animate="visible" // When the component mounts, animate to visible state
-      variants={variants} // Use the variants defined above
-      transition={{ duration: 0.5 }} // Define the transition duration
+      initial="hidden"
+      animate="visible"
+      variants={variants}
+      transition={{ duration: 0.5 }}
     >
       <div className="font-semibold logo text-xs">
         <svg
