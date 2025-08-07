@@ -1,0 +1,15 @@
+@media (max-width: 767px) {
+  .burger-menu-custom {
+    width: 20% !important;
+  }
+}
+
+.sunny-logo-nav-parent{
+	display: flex !important;
+    align-items: center !important;
+    flex-direction: row !important;
+}
+
+.sunny-logo-nav{
+	width: 30% !important;
+}
